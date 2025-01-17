@@ -1,6 +1,5 @@
-package se.lexicon.workshoplibrary.model;
+package se.lexicon.workshoplibrary.entity;
 
-import lombok.NonNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

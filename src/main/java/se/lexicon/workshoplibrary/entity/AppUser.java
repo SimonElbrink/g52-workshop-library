@@ -1,5 +1,6 @@
-package se.lexicon.workshoplibrary.model;
+package se.lexicon.workshoplibrary.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -11,9 +12,11 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
-
+@Entity
 public class AppUser {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.PROTECTED)
     private int id;
 
@@ -25,6 +28,7 @@ public class AppUser {
     private LocalDate regDate;
 
 //    @NonNull
+    @OneToOne
     private Details details;
 
 
